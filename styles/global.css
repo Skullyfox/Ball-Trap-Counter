@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.Container{
+    font-family: 'Oswald', sans-serif;
+    background-color: #252525;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fefefe;
+}
+
+.playersContainer{
+    margin: 0 0 20px 0;
+}
+
+.nameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 35px;
+}
+
+.nameContainer p {
+    margin: 0 10px;
+}
+
+.nameContainer button{
+    background-color: #e74c3c;
+    border: none;
+    margin: 0;
+    padding: 2px;
+}
+
+.scoreContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreContainer span{
+    margin: 0 10px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreContainer button{
+    margin: 0 10px;
+}
+
+.optionContainer input{
+    border: none;
+    font-size: 19px;
+}
+

@@ -51,7 +51,11 @@ export default {
       }
     },
 
-    mounted() {},
+    mounted() {
+      if(JSON.parse(localStorage.getItem('guys')) === undefined || JSON.parse(localStorage.getItem('guys')) === null){
+        localStorage.setItem('guys', JSON.stringify([]));
+      }
+    },
 
     beforeDestroy() {},
     

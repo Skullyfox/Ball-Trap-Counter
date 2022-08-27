@@ -11,13 +11,19 @@
         </div>
         <div class="scoreContainer">
           <span class="destroyed">
-            Touché : {{ guy.destroyed }}
-            <button v-on:click="updateUser(n, guy.name, guy.destroyed + 1, guy.missed)">+</button>
+            <button v-on:click="updateUser(n, guy.name, guy.destroyed + 1, guy.missed)"
+              style='background-color:green;border-radius:30%'><img src="../assets/target-icon.png"
+                style='height:70px;' /></button> {{
+                    guy.destroyed
+                }}
           </span>
-
+          <p style='font-size:80px;padding-bottom:20px'>-</p>
           <span class="missed">
-            Loupé : {{ guy.missed }}
-            <button v-on:click="updateUser(n, guy.name, guy.destroyed, guy.missed + 1)">+</button>
+            {{ guy.missed
+            }}
+            <button v-on:click="updateUser(n, guy.name, guy.destroyed, guy.missed + 1)"
+              style='background-color:darkred;border-radius:30%'><img src="../assets/targetmiss-icon.png"
+                style='height:70px;' /></button>
           </span>
         </div>
       </div>

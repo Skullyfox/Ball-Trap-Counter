@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+@font-face {
+    font-family: "SCOREBOARD";
+    src: local("SCOREBOARD"),
+        url(../assets/SCOREBOARD.ttf) format("truetype");
+}
+
+span {
+    font-family: SCOREBOARD;
+
+}
+
+.destroyed {
+    font-size: 80px !important;
+}
+
+.missed {
+    font-size: 80px !important;
+}
 
 .Container {
+    background-size: cover;
     font-family: 'Oswald', sans-serif;
     background-color: #252525;
-    height: 100vh;
+    height: 100vmax;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +36,7 @@ img {
     max-width: 600px;
     height: auto;
 }
+
 
 .playersContainer {
     margin: 0 0 20px 0;
@@ -73,6 +93,7 @@ img {
 }
 
 input[type=text] {
+    margin-bottom: 20px;
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -90,7 +111,7 @@ input[type=text]:focus {
 
 .button {
     position: relative;
-    background-color: #d3a637;
+    background-color: #31651a;
     border: none;
     font-size: 18px;
     color: #FFFFFF;
@@ -102,6 +123,7 @@ input[type=text]:focus {
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 20%;
 }
 
 .button:after {

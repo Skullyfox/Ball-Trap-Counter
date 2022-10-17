@@ -6,15 +6,17 @@
     <div class="playersContainer">
       <div v-for="(guy, n) in JSON.parse(guys)" :id="n" :key="n" class="player">
         <div class="nameContainer">
+          <button v-on:click="updateUser(n, guy.name, guy.destroyed - 1, guy.missed )">-1</button>
           <p>{{ guy.name }}</p>
-          <button v-on:click="deleteUser(guy.name)">Supprimer</button>
+          <button v-on:click="updateUser(n, guy.name, guy.destroyed, guy.missed - 1)">-1</button>
+
         </div>
         <div class="scoreContainer">
           <span class="destroyed">
             <button v-on:click="updateUser(n, guy.name, guy.destroyed + 1, guy.missed)"
               style='background-color:green;border-radius:30%'><img src="../assets/target-icon.png"
                 style='height:70px;' /></button> {{
-                    guy.destroyed
+                guy.destroyed
                 }}
           </span>
           <p style='font-size:80px;padding-bottom:20px'>-</p>
@@ -25,7 +27,12 @@
               style='background-color:darkred;border-radius:30%'><img src="../assets/targetmiss-icon.png"
                 style='height:70px;' /></button>
           </span>
+
         </div>
+        <p style='font-size:25px;padding-bottom:20px;text-align: center;'> Total tiré : {{guy.missed + guy.destroyed}}
+          <button class="buttonsup" v-on:click="deleteUser(guy.name)"> X </button>
+        </p>
+
       </div>
     </div>
 
@@ -45,7 +52,9 @@
 </template>
 
 <script>
+
 export default {
+
   name: "IndexPage",
 
   data() {

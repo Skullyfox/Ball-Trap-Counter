@@ -55,10 +55,12 @@ img {
 }
 
 .nameContainer button {
-    background-color: #e74c3c;
+    background-color: #09ab2c;
+    font-size: 22px;
     border: none;
     margin: 0;
     padding: 2px;
+    border-radius: 20%;
 }
 
 .scoreContainer {
@@ -124,6 +126,14 @@ input[type=text]:focus {
     overflow: hidden;
     cursor: pointer;
     border-radius: 20%;
+}
+
+.buttonsup {
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    background-color: #e74c3c;
+
 }
 
 .button:after {
